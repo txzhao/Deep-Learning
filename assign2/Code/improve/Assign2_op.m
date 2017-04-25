@@ -10,7 +10,7 @@ addpath(p);
 [Xtr5, Ytr5, ytr5] = LoadBatch('data_batch_5.mat');
 [Xte, Yte, yte] = LoadBatch('test_batch.mat');
 
-% regroup training data and validation data
+% regroup training and validation data
 Xtr = [Xtr1, Xtr2, Xtr3, Xtr4, Xtr5];
 Ytr = [Ytr1, Ytr2, Ytr3, Ytr4, Ytr5];
 ytr = [ytr1, ytr2, ytr3, ytr4, ytr5];
