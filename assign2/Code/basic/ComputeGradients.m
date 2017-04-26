@@ -11,8 +11,8 @@ function [grad_W, grad_b] = ComputeGradients(X, Y, P, h, W, b, lambda)
 
 W1 = W{1};
 W2 = W{2};
-b1 = cell2mat(b(1));
-b2 = cell2mat(b(2));
+b1 = b{1};
+b2 = b{2};
 grad_W1 = zeros(size(W1));
 grad_W2 = zeros(size(W2));
 grad_b1 = zeros(size(b1));
