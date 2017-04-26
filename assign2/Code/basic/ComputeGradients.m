@@ -9,8 +9,8 @@ function [grad_W, grad_b] = ComputeGradients(X, Y, P, h, W, b, lambda)
 % OUTPUT    - grad_W:           K*d
 %           - grad_b:           K*1
 
-W1 = cell2mat(W(1));
-W2 = cell2mat(W(2));
+W1 = W{1};
+W2 = W{2};
 b1 = cell2mat(b(1));
 b2 = cell2mat(b(2));
 grad_W1 = zeros(size(W1));
