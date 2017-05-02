@@ -27,7 +27,7 @@ for j = 1 : N/n_batch
     inds = j_start : j_end;
     Xbatch = X(:, inds);
     Ybatch = Y(:, inds);
-    Xbatch = Xbatch + 0.12*randn(size(Xbatch));
+    Xbatch = Xbatch + 0.12*randn(size(Xbatch));              % add a random jitter
     
     % compute gradients for each mini-batch
     [h, S, mu, v] = intervalues(Xbatch, W, b, k);
