@@ -31,8 +31,8 @@ flag = 0;
 
 for i = 1 : GDparams.n_epochs
     [W, b, mu_av, v_av] = MiniBatchGD(Xtr, Ytr, GDparams, W, b, lambda, rho, alpha, k);
-%     Jtr(i) = ComputeCost(Xtr, Ytr, W, b, lambda, k, mu_av, v_av);
-%     Jva(i) = ComputeCost(Xva, Yva, W, b, lambda, k, mu_av, v_av);
+    Jtr(i) = ComputeCost(Xtr, Ytr, W, b, lambda, k, mu_av, v_av);
+    Jva(i) = ComputeCost(Xva, Yva, W, b, lambda, k, mu_av, v_av);
 %     if Jtr(i) > 3*Jtr(1)
 %         flag = 1;
 %         break;
