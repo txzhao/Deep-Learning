@@ -24,7 +24,8 @@ for i = 1 : size(X, 2)
     
     g = g*W{end};
     hi(find(hi > 0)) = 1;
-    hi(find(hi < 0)) = 0.01;
+%    hi(find(hi < 0)) = 0;
+    hi(find(hi < 0)) = 0.01;            % leaky ReLu
     g_prev(i, :) = g*diag(hi);  
 end
 
@@ -48,8 +49,9 @@ for l = k - 1 : -1 : 1
         g_prev = g_prev*W{l};
         H = h{l - 1};
         H(find(H > 0)) = 1;
-        H(find(H < 0)) = 0.01;
-        g_prev = g_prev.*H';       % equvalent to gi*diag(Ind(si>0))
+%        H(find(H < 0)) = 0;
+        H(find(H < 0)) = 0.01;          % leaky ReLu
+        g_prev = g_prev.*H';            % equvalent to gi*diag(Ind(si>0))
     end    
 end
 
