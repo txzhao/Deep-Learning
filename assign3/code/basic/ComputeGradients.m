@@ -23,9 +23,7 @@ for i = 1 : size(X, 2)
     grad_Wk = grad_Wk + g'*hi';
     
     g = g*W{end};
-    hi(find(hi > 0)) = 1;
-    hi(find(hi < 0)) = 0.01;
-    g_prev(i, :) = g*diag(hi);  
+    g_prev(i, :) = g*diag(hi > 0);  
 end
 
 grad_W{k} = 2*lambda*W{end} + grad_Wk/size(X, 2);
@@ -46,10 +44,7 @@ for l = k - 1 : -1 : 1
     grad_W{l} = grad_W{l}/size(X, 2) + 2*lambda*W{l};
     if l > 1
         g_prev = g_prev*W{l};
-        H = h{l - 1};
-        H(find(H > 0)) = 1;
-        H(find(H < 0)) = 0.01;
-        g_prev = g_prev.*H';       % equvalent to gi*diag(Ind(si>0))
+        g_prev = g_prev.*(h{l - 1} > 0)';       % equvalent to gi*diag(Ind(si>0))
     end    
 end
 
