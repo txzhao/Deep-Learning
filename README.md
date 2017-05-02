@@ -1,4 +1,4 @@
-# DeepLearning
+# Deep-Learning
 * Database: CIFAR-10
 
 * Assignment 1: one-layer network with multiple-class outputs (test accuracy: 40.42%) 
