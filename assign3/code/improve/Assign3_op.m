@@ -94,7 +94,7 @@ P = zeros(size(P_n(:, :, 1)));
 for n = 1 : n_trial
     P = P + P_n(:, :, n);
 end
-acc_te = easyaccuracy(P, yte);              % majority vote
+acc_te = easyaccuracy(P, yte);                  % majority vote
 disp(['test accuracy:' num2str(acc_te*100) '%'])
 
 
