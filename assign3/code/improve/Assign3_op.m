@@ -67,14 +67,14 @@ Lambda = [2.8193e-5, 1.3144e-04, 8.1984e-04, 7.2835e-04, 6.4889e-04, 7.7693e-06]
 acc_n = zeros(1, n_trial);
 P_n = zeros(size(Yte, 1), size(Yte, 2), n_trial);
 
-% training with the best hyper-parameters
+% training with the best hyper-parameters (Bagging)
 for n = 1 : n_trial
     % initialize parameters
     eta = Eta(n);
     lambda = Lambda(n);
     GDparams = setGDparams(n_batch, eta, n_epochs);
     
-    % generate bootstrap replicate
+    % randomly generate bootstrap replicate
     idx = randperm(size(Xtr, 2), n_bootstrap);
     n_Xtr = Xtr(:, idx);
     n_Ytr = Ytr(:, idx);
