@@ -17,7 +17,8 @@ for i = 1 : k - 1
     mu{i} = mui;
     v{i} = vi;
 
-    X = max(0.01*sbar, sbar);
+%    X = max(0, sbar);
+    X = max(0.01*sbar, sbar);       % leaky ReLu
     h{i} = X;
 end
 
