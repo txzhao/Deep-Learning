@@ -88,7 +88,6 @@ for n = 1 : n_trial
     
 end
 
-
 %% evaluate networks
 % evaluate accuracy of the final classifer (Bagging)
 P = zeros(size(P_n(:, :, 1)));
