@@ -5,4 +5,4 @@
 
 * Assignment 2: two-layer network with multiple-class outputs (test accuracy: 54.06%)
 
-* Assignment 3: k-layer network with multiple-class outputs
+* Assignment 3: k-layer network with multiple-class outputs (test accuracy: 54.8%)
