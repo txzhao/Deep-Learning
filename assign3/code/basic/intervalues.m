@@ -17,7 +17,7 @@ for i = 1 : k - 1
     mu{i} = mui;
     v{i} = vi;
 
-    X = max(0.01*sbar, sbar);
+    X = max(0, sbar);
     h{i} = X;
 end
 
