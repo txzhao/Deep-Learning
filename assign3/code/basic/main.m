@@ -15,6 +15,7 @@ K = size(Ytr, 1);
 M = [d, m, K];
 std = 0.001;
 [W, b] = init_para(M, std);
+% [W, b] = init_para(M);           % Xavier initialization
 
 % check if analytical gradient is correct
 % batch_size = 1;
