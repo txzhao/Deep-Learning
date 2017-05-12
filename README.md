@@ -1,5 +1,5 @@
 # Deep-Learning
-* Database: CIFAR-10
+* Database: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 * Assignment 1: one-layer network with multiple-class outputs (test accuracy: 40.42%) 
 
