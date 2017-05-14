@@ -19,10 +19,12 @@ while e <= length(X) - n - 1
     end
     smooth_loss = 0.999*smooth_loss + 0.001*loss;
     
+    % print out smoothed loss
 %     if iter == 1 || mod(iter, 100) == 0
 %         disp(['iter = ' num2str(iter) ', smooth_loss = ' num2str(smooth_loss)]);
 %     end
     
+    % print out synthesized texts
     if mod(iter, 500) == 0
         y = synText(RNN, hprev, X(:, 1), textlen, K);
         c = [];
