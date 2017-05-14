@@ -7,6 +7,7 @@ for f = fieldnames(RNN)'
 %     % clip gradients to avoid exploding gradient
 %     grads.(f{1}) = max(min(grads.(f{1}), 5), -5);
 
+    % AdaGrad algorithm
     M.(f{1}) = M.(f{1}) + grads.(f{1}).^2;
     RNN.(f{1}) = RNN.(f{1}) - eta*(grads.(f{1})./(M.(f{1}) + eps).^(0.5));
 end
