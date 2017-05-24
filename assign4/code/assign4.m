@@ -36,6 +36,16 @@ M.V = zeros(size(RNN.V));
 M.b = zeros(size(RNN.b));
 M.c = zeros(size(RNN.c));
 
+% gradients check
+% X_ind = zeros(1, length(book_data));
+% for i = 1 : length(book_data)        
+%     X_ind(i) = char_to_ind(book_data(i));
+% end
+% X = oneHot(X_ind, K);
+% batch_size = 15;
+% dh = 1e-4;
+% gradCheck(batch_size, X(:, 1 : seq_length), X(:, 2 : seq_length + 1), RNN, dh, m, K);
+
 % training process using AdaGrad
 if exist('X.mat') == 2
     load('X.mat');
@@ -50,12 +60,9 @@ end
 Y = X;     
 iter = 1;
 n_epochs = 7;
+SL = [];
 for i = 1 : n_epochs
-    [RNN, ~, iter, M] = MiniBatchGD(RNN, X, Y, seq_length, K, m, eta, iter, M, ind_to_char);
+    [RNN, sl, iter, M] = MiniBatchGD(RNN, X, Y, seq_length, K, m, eta, iter, M, ind_to_char);
+    SL = [SL, sl];
 end
-
-% % gradients check
-% batch_size = 5;
-% dh = 1e-4;
-% gradCheck(batch_size, X, Y, RNN, dh, m, K);
-
+plot(1:length(SL), SL)
