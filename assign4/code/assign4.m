@@ -59,13 +59,17 @@ end
 
 Y = X;     
 iter = 1;
-n_epochs = 7;
+n_epochs = 8;
 SL = [];
+sl = 0;
+hprev = [];
+min_loss = 500;
 for i = 1 : n_epochs
-    [RNN, sl, iter, M] = MiniBatchGD(RNN, X, Y, seq_length, K, m, eta, iter, M, ind_to_char);
+    [RNN, sl, iter, M, min_RNN, min_h, min_iter, min_loss] = MiniBatchGD(RNN, ...
+        X, Y, seq_length, K, m, eta, iter, M, ind_to_char, sl(end), min_loss);
     SL = [SL, sl];
 end
 
-% plot the smooth loss
-plot(1:length(SL), SL)
+plot(1 : length(SL), SL)
+
 

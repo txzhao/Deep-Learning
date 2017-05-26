@@ -17,7 +17,7 @@ for f = fieldnames(RNN)'
     num_g = n_grads.(f{1});
     ana_g = grads.(f{1});
     denominator = abs(num_g) + abs(ana_g);
-    numerator = num_g - ana_g;
+    numerator = abs(num_g - ana_g);
     gradcheck_max = max(numerator(:))/max(eps, sum(denominator(:)));
     gradcheck_sum = sum(numerator(:))/max(eps, sum(denominator(:)));
     disp(['Field name: ' f{1}]);
