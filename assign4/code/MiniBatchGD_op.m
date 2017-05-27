@@ -41,18 +41,18 @@ while e <= length(X) - n - 1
 %     end
     
     if iter == 1 || mod(iter, 10000) == 0
-%         y = synText(RNN, hprev, X(:, 1), textlen, K);
-%         c = [];
-%         for i = 1 : textlen
-%             cur_c = ind_to_char(y(i));
-%             if cur_c == '^'
-%                 break;
-%             end
-%             c = [c cur_c];
-%         end
+        y = synText(RNN, hprev, X(:, 1), textlen, K);
+        c = [];
+        for i = 1 : textlen
+            cur_c = ind_to_char(y(i));
+            if cur_c == '^'
+                break;
+            end
+            c = [c cur_c];
+        end
         disp('====================================================');
         disp(['epoch = ' num2str(epoch) ', iter = ' num2str(iter) ', smooth_loss = ' num2str(smooth_loss)]);
-%         disp(c);
+        disp(c);
     end
     
     iter = iter + 1;
