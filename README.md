@@ -1,5 +1,6 @@
 # Deep-Learning
-* Datasets: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+* Datasets: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) for assign 1-3
 
 * Assignment 1: one-layer network with multiple-class outputs (test accuracy: 40.42%) 
 
