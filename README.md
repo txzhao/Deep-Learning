@@ -1,5 +1,5 @@
 # Deep-Learning
-This is a repo for the individual course assignments of DD2424 Deep Learning in Data Science. The code in this repo is mainly done in Matlab, and manipulations involved in the training process like gradient calculations and parameter updates are implemented in a relatively low level.
+This is a repo for the individual course assignments of DD2424 Deep Learning in Data Science at KTH 2017. The code in this repo is mainly done in Matlab, and manipulations involved in the training process like gradient calculations and parameter updates are implemented in a relatively low level.
 
 ## Datasets
 * [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) for assignment 1-3
