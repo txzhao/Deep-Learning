@@ -9,8 +9,10 @@ This is a repo for the individual course assignments of [DD2424 Deep Learning in
 ## Contents
 * Assignment 1: one-layer network with multiple-class outputs (test accuracy: 40.42%) 
 
-* Assignment 2: two-layer network with multiple-class outputs (test accuracy: 54.06%)
+report: [basic] + [optional]
 
-* Assignment 3: k-layer network with multiple-class outputs (test accuracy: 54.8%)
+* Assignment 2: two-layer network with multiple-class outputs (test accuracy: 54.06%) [report]
 
-* Assignment 4: vanilla RNN to synthesize English text character by character
+* Assignment 3: k-layer network with multiple-class outputs (test accuracy: 54.8%) [report]
+
+* Assignment 4: vanilla RNN to synthesize English text character by character [report]
