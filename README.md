@@ -9,7 +9,7 @@ This is a repo for the individual course assignments of [DD2424 Deep Learning in
 ## Contents
 * Assignment 1: one-layer network with multiple-class outputs (test accuracy: 40.42%) 
 
-report: [basic] + [optional]
+    report: [basic] + [optional]
 
 * Assignment 2: two-layer network with multiple-class outputs (test accuracy: 54.06%) [report]
 
