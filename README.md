@@ -17,8 +17,8 @@ This is a repo for the individual course assignments of [DD2424 Deep Learning in
 
 * Assignment 3: k-layer network with multiple-class outputs (test accuracy: 54.8%)
 
-    report: [basic](https://github.com/txzhao/Deep-Learning/blob/master/assign_3/doc/assign3.pdf) + [optional](https://github.com/txzhao/Deep-Learning/blob/master/assign_3/doc/assign3_optional.pdf)
+    *report: [basic](https://github.com/txzhao/Deep-Learning/blob/master/assign_3/doc/assign3.pdf) + [optional](https://github.com/txzhao/Deep-Learning/blob/master/assign_3/doc/assign3_optional.pdf)*
 
 * Assignment 4: vanilla RNN to synthesize English text character by character
 
-    report: [basic](https://github.com/txzhao/Deep-Learning/blob/master/assign_4/doc/assign4.pdf) + [optional](https://github.com/txzhao/Deep-Learning/blob/master/assign_4/doc/assign4_optional.pdf)
+    *report: [basic](https://github.com/txzhao/Deep-Learning/blob/master/assign_4/doc/assign4.pdf) + [optional](https://github.com/txzhao/Deep-Learning/blob/master/assign_4/doc/assign4_optional.pdf)*
